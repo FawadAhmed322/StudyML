@@ -1,8 +1,9 @@
 class Model:
-    def __init__(self):
-        self.layers = []
-        self.loss = None
-        self.optimizer = None
+    def __init__(self, layers=[], loss=None, optimizer=None, regularize=None):
+        self.layers = layers
+        self.loss = loss
+        self.optimizer = optimizer
+        self.regularize = regularize
 
     def forward(self, x):
         for layer in self.layers:
